@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     environment{
-        CONTAINER_NAME="nest-js app"
+        CONTAINER_NAME="nestjs-app"
         IMAGE_NAME="nestjs-image"
         EMAIL="bhaktasamir11042005@gmail.com"
         PORT="3000"
