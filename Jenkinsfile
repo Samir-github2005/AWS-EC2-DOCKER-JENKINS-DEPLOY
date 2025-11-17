@@ -17,7 +17,7 @@ pipline{
 
         stage('build docker image'){
             steps{
-                sh 'docker build -t ${IMAGE_NAME}'
+                sh 'docker build -t ${IMAGE_NAME} .'
             }
         }
 
@@ -40,9 +40,9 @@ pipline{
 
         stage('send email notification'){
             steps{
-                emailtext(
-                    subject:"nest app deployed on ec2"
-                    body:"your app is deployed http://16.170.157.59:${PORT}/"
+                emailext(
+                    subject:"nest app deployed on ec2",
+                    body:"your app is deployed http://16.170.157.59:${PORT}/",
                     to:"${EMAIL}"
                 )
             }
