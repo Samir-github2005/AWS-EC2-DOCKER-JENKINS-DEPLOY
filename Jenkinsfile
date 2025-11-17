@@ -41,7 +41,7 @@ pipeline{
         stage('send email notifications'){
             steps{
                 emailext(
-                    subject:"nest app deployed on ec2",
+                    subject:"nest app deployed on AWS-ec2",
                     body:"your app is deployed http://16.170.157.59:${PORT}/",
                     to:"${EMAIL}"
                 )
