@@ -38,7 +38,7 @@ pipline{
             }
         }
 
-        stage('send email notification'){
+        stage('send email notifications'){
             steps{
                 emailext(
                     subject:"nest app deployed on ec2",
